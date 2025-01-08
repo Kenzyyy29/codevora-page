@@ -1,11 +1,15 @@
-export default function DashboardLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        {/* Layout UI */}
-        {/* Place children where you want to render a page or nested layout */}
-        <main>{children}</main>
-      </body>
-    </html>
-  )
+import {Geist, Geist_Mono} from "next/font/google";
+import "./globals.css";
+import Navbar from "../components/Navbar"
+
+
+export default function RootLayout({children}) {
+ return (
+  <html lang="en" className={"${DejaVu.variable}"}>
+   <body className="bg-gradient-to-b from-slate-900 to-slate-500">
+    <Navbar />
+    {children}
+   </body>
+  </html>
+ );
 }
